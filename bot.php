@@ -53,9 +53,9 @@
             $('#protocol-info').html('Olá, como posso te ajudar?' + '<br>' + 'Seu número de protocolo é ' + aleatorio)
 
             $(document).keypress(function(e) {
-                if(e.which === 13) {
+                if (e.which === 13) {
                     $('#send-btn').click();
-                } 
+                }
             })
 
             $("#send-btn").on('click', function() {
@@ -70,6 +70,7 @@
                     type: 'POST',
                     data: 'text=' + $value,
                     success: function(result) {
+
                         $replay = '<div class="bot-inbox inbox"><div class="icon"><i class="fas fa-user"></i></div><div class="msg-header"><p>' + result + '</p></div></div>';
                         $(".form").append($replay);
                         $(".form").scrollTop($(".form")[0].scrollHeight);
