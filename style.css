@@ -9,6 +9,8 @@ html, body {
     display: grid;
     height: 100%;
     place-items: center;
+    position: relative;
+    width: 100%;
 }
 
 ::-webkit-scrollbar {
@@ -26,6 +28,63 @@ html, body {
 
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
+}
+
+.wrapper-box-exit{
+    position: fixed;
+    /* display: none; */
+    right: 20px;
+    bottom: -999px;
+}
+
+.wrapper-box-enter {
+    right: 20px;
+    bottom: 0;
+    
+    transition: all 0.5s linear;
+    transform: translateY(0);
+}
+
+.sub-title {
+    cursor: pointer;
+}
+
+.wrapper-down {
+    transition: all 0.5s linear;
+    transform: translateY(100%);    
+}
+
+
+#wrapper-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+    background: #f4f4f4;
+    border: 1px solid #ccc;
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    transition: all 0.2s;
+}
+
+
+#wrapper-button:hover {
+    background: #eee;
+    padding: 30px;
+}
+
+.wrapper-button {
+    display: none;
 }
 
 .wrapper {
